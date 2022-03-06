@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Python button script
+</title>
+<style>
+    table, th, td {
+      border:0px solid black;
+      text-align: center;
+    }
+    
+.centerv {
+  text-align: center;
+  color: maroon;
+}
+.center {
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+.centert {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body style="background-color:powderblue;">  
+{% comment %} <button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr> {% endcomment %}
+{% comment %} {% if mainData %}
+{{mainData | safe}}
+{% endif %} 
+<br><br> 
+{% if images %}
+{{images | safe}}
+{% endif %} {% endcomment %}
+{% comment %} <br><br>   {% endcomment %}
+
+<h1 class=" centerv">TREAT</h1>
+<form action="/external/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Input Text:
+    <input type="text" name="param" >
+    <br><br>
+    <input type="file" name="image" >
+    <br><br>
+    <input type="submit" value="Search">
+    </form>
+    {% if UploadedImage %}
+    <h2>Uploaded Image</h2>
+    <img src={{UploadedImage}} height=250 width=250>
+    {% endif %}
+    <!-- {% if edit_url %}
+    {{edit_url | safe}}
+    {% endif %} -->
+    <!-- {% if images2 %}
+    {{images2 | safe}}
+    {% endif %} -->
+    {% if mainData %}
+    <h2 class="center">Result</h2>
+    <table class="centert" >
+        <tr>
+          <th>NAME</th>
+          <th>IMAGE</th>
+          <th>COMMENTS</th>
+        </tr>
+        {% for name,image in recipes %}  
+        <tr>
+          <td>{{name}}</td>
+          <td><img src={{image}} height=50 width=50></td> 
+          <td>TODO</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% endif %}
+</body>
+</html>
