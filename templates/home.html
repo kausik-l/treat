@@ -34,11 +34,11 @@ h2 {
 {% comment %} <button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr> {% endcomment %}
 {% comment %} {% if mainData %}
 {{mainData | safe}}
-{% endif %} 
+{% endif %}  {% endcomment %}
 <br><br> 
-{% if images %}
+{% comment %} {% if images %}
 {{images | safe}}
-{% endif %} {% endcomment %}
+{% endif %} {% endcomment %} 
 {% comment %} <br><br>   {% endcomment %}
 
 <h1 class=" centerv">TREAT</h1>
@@ -55,6 +55,10 @@ h2 {
     <h2>Uploaded Image</h2>
     <img src={{UploadedImage}} height=250 width=250>
     {% endif %}
+    {% if text %}
+    <h3>Input query: </h3>
+    <p>{{text}}</p>
+    {% endif %}
     <!-- {% if edit_url %}
     {{edit_url | safe}}
     {% endif %} -->
@@ -62,7 +66,8 @@ h2 {
     {{images2 | safe}}
     {% endif %} -->
     {% if mainData %}
-    <h2 class="center">Result</h2>
+    <h2 class="center">Result (Obtained {{length}} matching recipes)</h2>
+
     <table class="centert" >
         <tr>
           <th>NAME</th>
@@ -72,8 +77,8 @@ h2 {
         {% for name,image in recipes %}  
         <tr>
           <td>{{name}}</td>
-          <td><img src={{image}} height=50 width=50></td> 
-          <td>TODO</td>
+          <td><img src={{image}} height=155 width=155></td> 
+          <td></td>
         </tr>
         {% endfor %}
       </table>
