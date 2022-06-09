@@ -22,6 +22,8 @@ from . import views
 urlpatterns = [
 url(r'^admin/', admin.site.urls),
 url(r'^$', views.button),
+url(r'^obj', views.obj, name='obj'),
 url(r'^output', views.output,name="script"),
 url(r'^external', views.external),
+# url(r'^result', views.result),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

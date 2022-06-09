@@ -192,11 +192,28 @@ def similarRecipebyName(recipe_obj, rName):
         df = df.sort_values(by=['score'],axis=0, ascending=True)
         return recipeid2obj(df['id'].values.tolist())
     
+def get_allergen(recp_id):
+    recipe_obj = json.load(open("data/recipe_repn.json","r"))
+    list_allergen = list()
+    for rid in recp_id:
+        temp = recipe_obj['recipe-ids'][rid]
+        str_val = ""
+        for idx,val in enumerate(temp['ingredients']):
+            if(len(str_val)==0):
+                str_val = str_val+val['allergies']['category']
+            else:
+                str_val = str_val+", "+val['allergies']['category']
+        list_allergen.append(str_val)
+    return list_allergen
+
+
+
+    
 def display_out(json_obj):
     count = 0 
     for idx, val in enumerate(list(json_obj['recipe-ids'].keys())):
         if(len(json_obj['recipe-ids'][val]['recipe_name'])>2):
-            print(str(count+1) +". " + json_obj['recipe-ids'][val]['recipe_name'] + " /Users/kausiklakkaraju/Documents/researchPhd/projects/work/MMReasoningDemo-main/demo/demoRecipeQA/data" + json_obj['recipe-ids'][val]['instructions'][-1]['modality']['image'][0][1:] + " ")
+            print(str(count+1) +". " + json_obj['recipe-ids'][val]['recipe_name'] + " /Users/kausiklakkaraju/Documents/researchPhd/projects/work/MMReasoningDemo-main/icaps-demo2/data" + json_obj['recipe-ids'][val]['instructions'][-1]['modality']['image'][0][1:] + " ")
             count = count +1 
             if(count == 6):
                 break

@@ -5,27 +5,57 @@
 Python button script
 </title>
 <style>
-    table, th, td {
-      border:0px solid black;
-      text-align: center;
-    }
-    
+  table, th, td {
+    border:0px solid black;
+    text-align: center;
+  }
+
+button {
+background: none!important;
+border: none;
+padding: 0!important;
+/*optional*/
+font-family: arial, sans-serif;
+/*input has OS specific font-family*/
+color: #069;
+text-decoration: underline;
+cursor: pointer;
+}
+
 .centerv {
-  text-align: center;
-  color: maroon;
+text-align: center;
+color: maroon;
 }
 .center {
-  text-align: center;
+text-align: center;
 }
 h1 {
-  font-size: 50px;
+font-size: 50px;
 }
 h2 {
-  font-size: 40px;
+font-size: 40px;
 }
 .centert {
-  margin-left: auto;
-  margin-right: auto;
+margin-left: auto;
+margin-right: auto;
+}
+#overlay {
+position: fixed;
+display: none;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0,0,0,0.90);
+z-index: 2;
+cursor: pointer;
+overflow-y: scroll;
+
+}
+#text{
+color: white;
 }
 
 </style>
@@ -35,7 +65,6 @@ h2 {
 {% comment %} {% if mainData %}
 {{mainData | safe}}
 {% endif %}  {% endcomment %}
-<br><br> 
 {% comment %} {% if images %}
 {{images | safe}}
 {% endif %} {% endcomment %} 
@@ -45,7 +74,7 @@ h2 {
 <form action="/external/" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     Input Text:
-    <input type="text" name="param" >
+    <input type="text" name="param" autocomplete="off" size="36">
     <br><br>
     <input type="file" name="image" >
     <br><br>
@@ -59,6 +88,12 @@ h2 {
     <h3>Input query: </h3>
     <p>{{text}}</p>
     {% endif %}
+    {% if text and UploadedImage %}
+    <h2>Uploaded Image</h2>
+    <img src={{UploadedImage}} height=250 width=250>
+    <h3>Input query: </h3>
+    <p>{{text}}</p>
+    {% endif %}
     <!-- {% if edit_url %}
     {{edit_url | safe}}
     {% endif %} -->
@@ -66,22 +101,36 @@ h2 {
     {{images2 | safe}}
     {% endif %} -->
     {% if mainData %}
-    <h2 class="center">Result (Obtained {{length}} matching recipes)</h2>
+    <h2 class="center">Result (Found {{length}} matching recipes)</h2>
 
     <table class="centert" >
         <tr>
           <th>NAME</th>
           <th>IMAGE</th>
-          <th>COMMENTS</th>
+          <th>ALLERGEN CATEGORY</th>
         </tr>
-        {% for name,image in recipes %}  
+        {% for name,image,obj,all in recipes %}  
         <tr>
-          <td>{{name}}</td>
-          <td><img src={{image}} height=155 width=155></td> 
-          <td></td>
+          <td><button onclick="on({{obj}})">{{name}}</button></td>
+          <td><img src={{image}} height=155 width=155></td>  
+          <td>{{all}}</td>
+          <div id="overlay" onclick="off()">
+            <pre id="text"></pre>
+          </div>   
         </tr>
         {% endfor %}
       </table>
       {% endif %}
+      <script>
+        function on(val) {
+          document.getElementById("overlay").style.display = "Block";
+          document.getElementById("text").innerHTML = JSON.stringify(val,null,4);
+
+        }
+        
+        function off() {
+          document.getElementById("overlay").style.display = "none";
+        }
+        </script>
 </body>
 </html>

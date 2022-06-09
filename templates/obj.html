@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Python button script
+</title>
+<style>
+    table, th, td {
+      border:0px solid black;
+      text-align: center;
+    }
+    
+.centerv {
+  text-align: center;
+  color: maroon;
+}
+.center {
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+.centert {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+</head>
+<body style="background-color:powderblue;">  
+
+<h1 class="centerv">Resultant JSON</h1>
+<pre></pre>
+{% comment %} {% for each in obj %}
+<p>{{each}}</p>
+{% endfor %} {% endcomment %}
+<script>
+  window.onload = myFun()
+  function myFun(){
+    result = localStorage.getItem("object");
+    res = JSON.stringify(JSON.parse(result),null,4);
+    let header = document.querySelector("pre");
+    header.innerHTML = res;
+    console.log(res)
+  }
+</script>
+</body>
+</html>
