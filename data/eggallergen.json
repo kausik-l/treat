@@ -1,0 +1,788 @@
+{
+	"recipe-ids": {
+
+		"4": {
+			"recipe_name": "delicious-chocolate-bark-recipe",
+			"ingredients": [{
+				"name": "butter",
+				"quantity": {
+					"measure": "0.5",
+					"unit": "pound"
+				},
+				"allergies": {
+					"id": "0x1c80",
+					"category": ["cows milk"],
+					"ref": ["http://research.bmh.manchester.ac.uk/informall/allergenic-food/?foodid=5000"],
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/delicious-chocolate-bark-recipe/ingredients/01_butter.jpeg"
+			}, {
+				"name": "brown sugar",
+				"quantity": {
+					"measure": "1/4",
+					"unit": "cup"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/delicious-chocolate-bark-recipe/ingredients/02_brownsugar.jpeg"
+			}, {
+				"name": "white sugar",
+				"quantity": {
+					"measure": "1/4",
+					"unit": "cup"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "granulated",
+				"image": "./images/delicious-chocolate-bark-recipe/ingredients/03_whitesugar.jpeg"
+			}, {
+				"name": "graham crackers",
+				"quantity": {
+					"measure": "0.5",
+					"unit": "box"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/delicious-chocolate-bark-recipe/ingredients/04_grahamcrackers.jpeg"
+			}, {
+				"name": "chocolate chips",
+				"quantity": {
+					"measure": "2",
+					"unit": "cups"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "semi-sweet",
+				"image": "./images/delicious-chocolate-bark-recipe/ingredients/05_chocolatechips.jpeg"
+			}],
+			"prep_time": "",
+			"cook_time": "",
+			"serves": "",
+			"instructions": [{
+				"original_text": "Preheat your oven to 350 degrees F. Take your cookie sheet and line it with aluminum foil. Make sure all the sides have a little bit of excess so that none of the butter mixture will leak out later. Then take your graham crackers and arrange them on the bottom of the pan, breaking up the last few in order to fit.",
+				"input_condition": ["have_oven", "have_cooke_sheet", "have_aluminum foil", "have_graham_crackers"],
+				"task": [{
+					"action_name": "Preheat oven to 350 F",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Line cookie sheet with aluminum foil",
+					"output_quality": ["make sure to have excess aluminum foil on the side to prevent leaking of butter"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Arrange graham crakcers on the bottom of the pan",
+					"output_quality": ["breaking the graham crackers helps in fitting them in the pan"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_layered_graham_crackers"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Melt the butter in your medium sauce pan over medium heat. Once the butter has all melted add your 1/4 cup brown sugar and 1/4 cup white sugar. Stir the mixture together and bring it to a boil. Once boiling, reduce the heat and let the mixture bubble for 4 minutes, then remove from heat. Proceed to next step",
+				"input_condition": ["have_medium_sauce_pan", "have_butter", "have_brown_sugar", "have_white_sugar"],
+				"task": [{
+					"action_name": "Melt the butter in medium sauce pan over medium heat",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": ["medium sauce pan"],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Add brown sugar and white sugar to the melted butter",
+					"output_quality": ["make sure all the butter has melted"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Bring the mixture to a boil",
+					"output_quality": ["lower the heat when the mixture is boiling and let it bubble for 4 minutes"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_butter_mixture"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Pour the butter/sugar mixture over the graham crackers on the cookie sheet and spread evenly. Bake in the oven for 8 minutes.",
+				"input_condition": ["have_butter_mixture", "have_layered_graham_crackers"],
+				"task": [{
+					"action_name": "Pour the butter/sugar mixture over the graham crackers on the cookie sheet",
+					"output_quality": ["spread the mixture evenly"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Bake in the oven for 8 minutes",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_baked_cookie_mixture"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Remove from the oven after baking and let rest until the bubbling disappears. Sprinkle the 2 cups of chocolate chips evenly on top. Wait for 2 minutes for the chocolate to melt, then take a spatula and spread the chocolate into an even layer. Now you can add any toppings you desire and press them lightly into the chocolate so the stay on.",
+				"input_condition": ["have_chocolate_chips"],
+				"task": [{
+					"action_name": "Remove from the oven after baking",
+					"output_quality": ["rest until bubbling disappears"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Sprinkle 2 cups of chocolate chips on top",
+					"output_quality": ["Wait for the chocolate to melt which usually takes 2 minutes and spread it into a layer"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Press toppings of choice into the chocolate layer",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_added_toppings"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Cool to room temperature, then refrigerate for 2 hours. Peel the foil from the chilled bark and break into pieces however large you like, 2-inch irregular pieces is a good size. Your bark is now ready to be devoured, refrigerate any leftovers if there are any! Notes: Personally i think the bark is best after it has been refrigerated over night, but this is not required.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "Cool to room temperature, then refrigerate for 2 hours",
+					"output_quality": ["rest until bubbling disappears"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Break the bark into pieces after removing the foil",
+					"output_quality": ["2 inch pieces of irregular size is good", "tastes best when the bark is refrigerated over night."],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_bark_pieces"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Cool to room temperature, then refrigerate for 2 hours. Peel the foil from the chilled bark and break into pieces however large you like, 2-inch irregular pieces is a good size. Your bark is now ready to be devoured, refrigerate any leftovers if there are any! Notes: Personally i think the bark is best after it has been refrigerated over night, but this is not required.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "Cool to room temperature, then refrigerate for 2 hours",
+					"output_quality": ["rest until bubbling disappears"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Break the bark into pieces after removing the foil",
+					"output_quality": ["2 inch pieces of irregular size is good", "tastes best when the bark is refrigerated over night."],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["recipe_complete"],
+				"modality": {
+					"image": ["./images/delicious-chocolate-bark-recipe/delicious-chocolate-bark-recipe_6_0.jpg", "./images/delicious-chocolate-bark-recipe/delicious-chocolate-bark-recipe_6_1.jpg"],
+					"video": " "
+				}
+			}]
+		},
+		"5": {
+			"recipe_name": "bacon-candy",
+			"ingredients": [{
+				"name": "Yellow and Green M&M",
+				"quantity": {
+					"measure": "1",
+					"unit": "bag"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/eggs-and-bacon-candy/ingredients/01_mnm.jpeg"
+			}, {
+				"name": "White Chocolate Chips",
+				"quantity": {
+					"measure": "1",
+					"unit": "bag"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/eggs-and-bacon-candy/ingredients/02_whitechocolatechips.jpeg"
+			}, {
+				"name": "Mini Pretzel sticks",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/eggs-and-bacon-candy/ingredients/03_minipretzelsticks.jpeg"
+			}],
+			"prep_time": "",
+			"cook_time": "",
+			"serves": "",
+			"instructions": [{
+				"original_text": "First you'll need to take the parchment paper and lay it out on the pan.",
+				"input_condition": ["have_parchment_paper", "have_pan"],
+				"task": [{
+					"action_name": "Lay the parchment paper on the pan",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": ["pan", "parchment paper"],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_parchment_paper_on_pan"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Now set up the pretzels in groups of 3 and equally spread them out in rows and columns.",
+				"input_condition": ["have_pretzels"],
+				"task": [{
+					"action_name": "Set up pretzels in groups of 3",
+					"output_quality": ["Spread them out in rows and columns"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_pretzels_organised"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Open up a bag of M and M's and sort the yellow and green M and M's from the other colors that way you can make Regular eggs and bacon or green eggs and ham.",
+				"input_condition": ["have_m_and_m"],
+				"task": [{
+					"action_name": "Sort yellow and green M and M's from the bag",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_sorted_m_and_m"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "To make the candy egg whites, take the bag of white chocolate and dump it in a microwave safe bowls, next heat it for 20 seconds. Then stir it, heat it for another 20 seconds, and stir it. Put it in the microwave for another 20 seconds and stir, if the white chocolate is still not melted then put it for another 20 seconds and stir then it should be done.",
+				"input_condition": ["have_white_chocolate"],
+				"task": [{
+					"action_name": "Heat white chocolate in microwave safe bowls for 20 seconds",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": ["microwave_safe_bowl"],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Heat for another 20 seconds after stirring the white chocolate",
+					"output_quality": ["continue the process two more times if the white chocolate does not melt"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["have_metled_white_chocolate"],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "The last step is to add all the ingredients together, Take a normal spoon and put about a dollop of white chocolate on each 3 pretzels. Take your time because the white chocolate will take a while to cool off. Then put the yellow or green M and M's or both on top of the white chocolate. After this is done you'll have to wait a while, if you want them to cool off quicker and be stable than put the candy (if on a pan) in your freezer for about 10 minutes and take them out.",
+				"input_condition": ["have_white_chocolate"],
+				"task": [{
+					"action_name": "Put a dallop of white chocolate using a spoon on 3 pretzels",
+					"output_quality": ["take your time as the white chocolate takes time to cool"],
+					"background_knowledge": {
+						"tool": ["microwave_safe_bowl"],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Put the M&Ms as per liking on the 3 pretzels",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}, {
+					"action_name": "Wait a while for them to cool",
+					"output_quality": ["can also be put in the freezer for 10 minutes to cool quicker"],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": ["recipe_complete"],
+				"modality": {
+					"image": ["./images/eggs-and-bacon-candy/eggs-and-bacon-candy_6_0.jpg"],
+					"video": " "
+				}
+			}]
+		},
+		"16": {
+			"recipe_name": "dinosaur-inspired-by-mikeasaurus",
+			"ingredients": [{
+				"name": "Jell-O",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "pineapple",
+				"image": "./images/dinosaur-egg-inspired-by-mikeasaurus/ingredients/01_jello.jpeg"
+			}, {
+				"name": "avacado",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "with lot of bumps and character",
+				"image": "./images/dinosaur-egg-inspired-by-mikeasaurus/ingredients/02_avacado.jpeg"
+			}, {
+				"name": "avacado dip",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/dinosaur-egg-inspired-by-mikeasaurus/ingredients/03_avacadodip.jpeg"
+			}, {
+				"name": "chips",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/dinosaur-egg-inspired-by-mikeasaurus/ingredients/04_chips.jpeg"
+			}, {
+				"name": "lettuce",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "0x37f8",
+					"category": ["Vegetables"],
+					"ref": ["https://farrp.unl.edu/informallvegetables"],
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/dinosaur-egg-inspired-by-mikeasaurus/ingredients/05_lettuce.jpeg"
+			}, {
+				"name": "parsley",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "0x8b9d",
+					"category": ["leaves"],
+					"ref": ["https://farrp.unl.edu/informallspicesherbs"],
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/dinosaur-egg-inspired-by-mikeasaurus/ingredients/06_parsley.jpeg"
+			}, {
+				"name": "carrot",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "0x17fc",
+					"category": ["Vegetables"],
+					"ref": ["https://farrp.unl.edu/informallvegetables"],
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "tops",
+				"image": "./images/dinosaur-egg-inspired-by-mikeasaurus/ingredients/07_carrot.jpeg"
+			}, {
+				"name": "mint",
+				"quantity": {
+					"measure": "",
+					"unit": ""
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/dinosaur-egg-inspired-by-mikeasaurus/ingredients/08_mint.jpeg"
+			}],
+			"prep_time": "",
+			"cook_time": "",
+			"serves": "",
+			"instructions": [{
+				"original_text": "Wash: Avocados, greenery, paint mixer, and dinosaurs.Dry with a lint free towel.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Jell-0:Follow the instructions for making Jell-0.Set aside while you cut the avocados.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Method:  Cut the avocados as shown but be sure to leave the stem in place or you will have a hole and the Jell-O will leak out.  Remove the inside and place in a bowl.  Completely clean the inside of the avocados making sure there is no residue and dry.  If you do not wish to use\u00a0a dinosaur,\u00a0you can cut the avocado like the last picture instead.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Fill:Place the avocado skin in a small bowl and support it against the side of the bowl, you may need a small lid to secure it.Ladle the Jell-0 into the egg filling it to the top.Place it in the refrigerator to chill until it firms up a bit.Remove the egg from the refrigerator and position the dinosaur inside as shown.Put it in the refrigerator until it is firm.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Avocado Dip:  Make your favorite avocado dip using the power drill with the paint ( stir ) attachment.  Mix until well incorporated.  Place the egg in a bowl and fill it 3/4 of the way.  Insert the dinosaur and position as you like.  I cut a sliver of a tomato to place inside the dinosaurs mouth.  Add more dip and level off and wipe any dip off the sides of the egg\u00a0with a paper towel.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Decorating the plate:  Arrange the dinosaur eggs on a plate adding the greenery\u00a0or chips.  You can stick the mint in the back of the dinosaur to give it a jungle appearance, we like it better that way.  You may notice that I did not use the best avocados. I used the ripest ones because\u00a0I had to test the idea and I thought they turned out very nicely. The best ones \u00a0were not ripe enough.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Penolopy suggested using ferns or frons as a background for the egg. You could make a card with a picture of a fron or fern and stick it behind the egg. Oh that would be pretty. I hope this inspires you to try and make these. They did not take that long to make if you already have the dip\u00a0or Jell-0 made. I am entering these into 2 contest, \u00a0if you love it please vote top right when the vote button is available;\u00a0thanks in advance.  \u00a0  I wish to thank Instructables, our sponsors, contributors, and all my visitors for making this a great place to share. Thanks for stopping by and do have a safe and happy SPRING!!  sunshine  \u00a0",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["./images/dinosaur-egg-inspired-by-mikeasaurus/dinosaur-egg-inspired-by-mikeasaurus_8_1.jpg"],
+					"video": " "
+				}
+			}]
+		},
+		
+		"20": {
+			"recipe_name": "chocolate-peanut-butter",
+			"ingredients": [{
+				"name": "peanut butter candy",
+				"quantity": {
+					"measure": "18-20",
+					"unit": "count"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "chocolate covered",
+				"image": "./images/chocolate-peanut-butter-eggs/ingredients/01_chocolatecoveredpeanutbuttercandy.jpeg"
+			}, {
+				"name": "peanut butter",
+				"quantity": {
+					"measure": "2",
+					"unit": "cups"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/chocolate-peanut-butter-eggs/ingredients/02_peanutbutter.jpeg"
+			}, {
+				"name": "sugar",
+				"quantity": {
+					"measure": "2",
+					"unit": "cups"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "powdered",
+				"image": "./images/chocolate-peanut-butter-eggs/ingredients/03_powderedsugar.jpeg"
+			}, {
+				"name": "vanilla",
+				"quantity": {
+					"measure": "2",
+					"unit": "tsp"
+				},
+				"allergies": {
+					"id": "",
+					"category": "",
+					"ref": "",
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/chocolate-peanut-butter-eggs/ingredients/04_vanilla.jpeg"
+			}, {
+				"name": "butter",
+				"quantity": {
+					"measure": "0.5",
+					"unit": "cup"
+				},
+				"allergies": {
+					"id": "0x1c80",
+					"category": ["cows milk"],
+					"ref": ["http://research.bmh.manchester.ac.uk/informall/allergenic-food/?foodid=5000"],
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "",
+				"image": "./images/chocolate-peanut-butter-eggs/ingredients/05_butter.jpeg"
+			}, {
+				"name": "chocolate",
+				"quantity": {
+					"measure": "12",
+					"unit": "oz"
+				},
+				"allergies": {
+					"id": "0x386e",
+					"category": ["other"],
+					"ref": ["https://farrp.unl.edu/informalleggs", "https://farrp.unl.edu/allergenic-foods-and-their-allergens-links-informall", "https://www.healthline.com/health/allergies/wheat#causes", "https://www.healthline.com/nutrition/foods/wheat"],
+					"details": ""
+				},
+				"alternative": "",
+				"quality_characteristic": "melting",
+				"image": "./images/chocolate-peanut-butter-eggs/ingredients/06_meltingchocolate.jpeg"
+			}],
+			"prep_time": "",
+			"cook_time": "",
+			"serves": "",
+			"instructions": [{
+				"original_text": "Place the choloate in your chocolate melter. if you don't have one you can melt your chocolate in the microwave. In a microwaveable bowl melt the butter and peanut butter. About 1 minute. Mix well.Next, add the vanilla and powered sugar and mix well.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Shape the Peanut butter filling into an egg shape or whatever shape you want. My daughter's helped with this part ;)Place the Peanut butter filling onto a cookie sheet covered with parchment paper. Place them in the freezer for 15 minutes.",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["", ""],
+					"video": " "
+				}
+			}, {
+				"original_text": "Drop the hard Peanut butter filling into the melted chocolate and cover. Remove, it from the melted choolate. Tap the candy lightly on the side of the bowl to remove excess chocolate. Place back on parchment paper and place back into freezer for 10 minutes. Enjoy!",
+				"input_condition": [""],
+				"task": [{
+					"action_name": "",
+					"output_quality": [""],
+					"background_knowledge": {
+						"tool": [""],
+						"failure": [""]
+					}
+				}],
+				"output_condition": [""],
+				"modality": {
+					"image": ["./images/chocolate-peanut-butter-eggs/chocolate-peanut-butter-eggs_4_3.jpg"],
+					"video": " "
+				}
+			}]
+		}
+    }
+}
