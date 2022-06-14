@@ -16,6 +16,7 @@ from numpy.linalg import norm
 import os.path
 import cv2 as cv
 import matplotlib.pyplot as plt
+from pathlib import Path
 ##############################################Conceptnet-NumberBatch############################################################
 
 def load_all_recipes():
@@ -213,7 +214,9 @@ def display_out(json_obj):
     count = 0 
     for idx, val in enumerate(list(json_obj['recipe-ids'].keys())):
         if(len(json_obj['recipe-ids'][val]['recipe_name'])>2):
-            print(str(count+1) +". " + json_obj['recipe-ids'][val]['recipe_name'] + " /Users/kausiklakkaraju/Documents/researchPhd/projects/work/MMReasoningDemo-main/icaps-demo2/data" + json_obj['recipe-ids'][val]['instructions'][-1]['modality']['image'][0][1:] + " ")
+            filedir = Path(os.path.dirname(__file__))
+            filepath = os.path.join(str(filedir), 'data')
+            print(str(count+1) +". " + json_obj['recipe-ids'][val]['recipe_name'] + " " + filepath + json_obj['recipe-ids'][val]['instructions'][-1]['modality']['image'][0][1:] + " ")
             count = count +1 
             if(count == 6):
                 break
