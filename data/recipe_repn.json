@@ -1240,7 +1240,7 @@
 			}]
 		},
 		"5": {
-			"recipe_name": "bacon-candy",
+			"recipe_name": "eggs-and-bacon-candy",
 			"ingredients": [{
 				"name": "Yellow and Green M&M",
 				"quantity": {
@@ -3215,7 +3215,7 @@
 			}]
 		},
 		"16": {
-			"recipe_name": "dinosaur-inspired-by-mikeasaurus",
+			"recipe_name": "dinosaur-egg-inspired-by-mikeasaurus",
 			"ingredients": [{
 				"name": "Jell-O",
 				"quantity": {
@@ -3971,7 +3971,7 @@
 			}]
 		},
 		"20": {
-			"recipe_name": "chocolate-peanut-butter",
+			"recipe_name": "chocolate-peanut-butter-eggs",
 			"ingredients": [{
 				"name": "peanut butter candy",
 				"quantity": {
@@ -4432,7 +4432,7 @@
 			}]
 		},
 		"22": {
-			"recipe_name": "peekaboo-sugar",
+			"recipe_name": "peekaboo-sugar-eggs",
 			"ingredients": [{
 				"name": "sugar",
 				"quantity": {
